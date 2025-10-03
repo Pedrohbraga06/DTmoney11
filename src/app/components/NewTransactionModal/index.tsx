@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import  Modal  from 'react-modal'
+import Modal from 'react-modal'
 import { Container } from './styles'
 
 import closeimg from '../../assets/closeimg.svg'
@@ -9,37 +9,41 @@ interface NewTransactionModalProps {
     onRequestClose: () => void;
 }
 
-export function NewTransactionModal({isOpen, onRequestClose }: NewTransactionModalProps) {
+export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionModalProps) {
     return (
-        <Modal isOpen={isOpen} 
-             onRequestClose={onRequestClose}
-             overlayClassName='react-modal-overlay'
-             className='react-modal-content'
-           >
-            <button 
-            type='button' 
-            onClick={onRequestClose}  
-            className='react-modal-close'>
+        <Modal isOpen={isOpen}
+            onRequestClose={onRequestClose}
+            overlayClassName='react-modal-overlay'
+            className='react-modal-content'
+        >
+            <button
+                type='button'
+                onClick={onRequestClose}
+                className='react-modal-close'>
+
+                <img src="/Icons(1).svg" alt="Fechar modal" />
                 
-                <img src={closeimg} alt="Fechar modal" />
+
             </button>
-               <Container>
-            <input placeholder='Titulo' 
-            />
+            <Container>
+                <h2>Cadastrar transacao</h2>
 
-            <input type='number' placeholder='Valor' 
-            />
+                <input placeholder='Titulo'
+                />
 
-            <input placeholder='Categoria'
-             />
+                <input type='number' placeholder='Valor'
+                />
 
-            <button type='submit'>
-                Cadastrar
-            </button>
-            
-                 <h2>Cadastrar transacao</h2>
-               </Container>
-     
-           </Modal>
+                <input placeholder='Categoria'
+                />
+
+                <button type='submit'>
+                    Cadastrar
+                </button>
+
+                
+            </Container>
+
+        </Modal>
     )
 }

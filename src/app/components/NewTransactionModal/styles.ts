@@ -1,12 +1,12 @@
-'use client';
+"use client";
 import styled from "styled-components";
 
 export const Container = styled.form`
-h2 {
-    color: var(--text-title);
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
+    h2 {
+        color: var(--text-title);
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
 
     input {
         width: 100%;
@@ -19,16 +19,18 @@ h2 {
         font-size: 1rem;
         &::placeholder {
             color: var(--text-body);       
-        }
+        };
         & + input {
             margin-top: 1rem;
-        }
-            
-    }
+        };
+
         left: 0;
         display: flex;
         padding: 3rem;
         position: relative;
+            
+    }
+        
 
     button[type="submit"] {
         width: 100%;
